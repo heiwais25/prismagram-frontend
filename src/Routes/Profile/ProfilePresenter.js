@@ -62,7 +62,7 @@ const Posts = styled.div`
 `;
 
 export default ({ data, loading, logOut }) => {
-  if (loading) {
+  if (!loading || !data) {
     return (
       <Wrapper>
         <Loader />
